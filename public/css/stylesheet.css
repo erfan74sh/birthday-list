@@ -1,0 +1,261 @@
+* {
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	display: inline-block;
+}
+
+#root {
+	width: 100%;
+	min-height: 100vh;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(247, 247, 247);
+}
+
+.App {
+	width: 500px;
+	min-height: 200px;
+	padding: 2rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 15px 15px 25px 0 rgba(0, 0, 0, 0.1),
+		-15px -15px 25px 0 rgba(255, 255, 255, 0.9);
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+header {
+	font-size: 1.2rem;
+}
+
+#new-person-form {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: 5rm;
+	padding: 0.75rem;
+}
+
+#new-person-form label {
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.5);
+	transition: 300ms;
+	background: linear-gradient(
+		-15deg,
+		rgba(255, 255, 255, 0.7),
+		rgba(0, 0, 0, 0.02)
+	);
+	box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.1),
+		-7px -7px 10px 0 rgba(255, 255, 255, 0.9);
+}
+#new-person-form label:hover {
+	color: rgba(0, 0, 0, 0.85);
+}
+
+#new-person-form img {
+	width: 100%;
+	height: auto;
+}
+
+#new-person-form button {
+	appearance: none;
+	margin: 0;
+	padding: 0;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	font-size: 1.7rem;
+	color: rgba(0, 0, 0, 0.5);
+	transition: 300ms;
+}
+#new-person-form button:hover {
+	color: rgba(0, 0, 0, 0.85);
+}
+
+#name-date-div {
+	flex: auto;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 1rem;
+}
+#name-date-div input {
+	width: 49%;
+	height: 30px;
+}
+
+.persons-list {
+	width: 100%;
+}
+
+.person-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding: 0.75rem;
+	height: 5rem;
+}
+
+.category-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid black;
+	cursor: pointer;
+}
+
+.category-title h4 {
+	margin: 0;
+}
+
+.category-info {
+	display: flex;
+	align-items: center;
+}
+
+.category-info p {
+	display: inline-block;
+	font-size: 0.65rem;
+	font-weight: bold;
+	margin-right: 0.7rem;
+}
+
+.person-div {
+	display: flex;
+	flex: auto;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1rem;
+	height: 60px;
+	border-radius: 10px;
+	background: linear-gradient(
+		-15deg,
+		rgba(255, 255, 255, 0.7),
+		rgba(0, 0, 0, 0.02)
+	);
+	box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.1),
+		-7px -7px 10px 0 rgba(255, 255, 255, 0.9);
+}
+
+.icon-div {
+	width: 0;
+	height: 60px;
+	font-size: 0.9rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	transition: 300ms;
+	overflow: hidden;
+}
+
+.person-container:hover .icon-div {
+	width: 20px;
+	margin-left: 0.7rem;
+}
+
+.icon-div span {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.icon-div span :hover {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.img-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70px;
+	height: 70px;
+	margin-right: 1rem;
+	border-radius: 80px;
+	overflow: hidden;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: linear-gradient(
+		-45deg,
+		rgba(255, 255, 255, 0.7),
+		rgba(0, 0, 0, 0.02)
+	);
+	box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.1),
+		-7px -7px 10px 0 rgba(255, 255, 255, 0.9);
+}
+.img-div img {
+	width: 100%;
+	height: auto;
+}
+
+.person-info {
+	display: flex;
+	flex: auto;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+.person-info p:first-child {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.person-info p:last-child {
+	font-size: 0.7rem;
+	font-weight: bold;
+}
+
+.days-left {
+	display: flex;
+	flex-direction: column;
+	width: 50px;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.days-left p:first-child {
+	font-weight: bold;
+}
+
+.days-left p:last-child {
+	font-size: 0.7rem;
+}
